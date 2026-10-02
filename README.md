@@ -1,24 +1,26 @@
-# android_app
+# Flutter Counter
 
-A new Flutter project.
+Учебное приложение на Flutter: счётчик с усложнениями.
 
-## Getting Started
+## Что реализовано
 
-This project is a starting point for a Flutter application.
+- Счётчик с возможностью закинуть число в локальную БД Hive, добавить описание в блок к числу. Добавлена локализация
+- Асинхронные операции через async/await в счетчике и Hive
+- Управление состоянием через Provider (ChangeNotifier): логика счётчика, секций и базы данных вынесена в отдельные классы и отделена от UI
 
-A few resources to get you started if this is your first Flutter project:
+## Технологии
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+- Flutter, Dart
+- provider
+- другие пакеты из pubspec.yaml:
+    hive, hive_flutter: локальная база данных
+    shared_preferences: хранение простых настроек (если ты используешь его для языка или темы, так и напиши)
+    easy_localization, easy_localization_loader, intl: локализация
+    go_router: навигация
+    flutter_svg: SVG-картинки
+    icons_launcher, flutter_native_splash: загрузочный экран приложения
+    cupertino_icons: иконки
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Планы
 
-
-// Column - содержит виджеты сверху вниз
-// Row - содержит виджеты слева напрво
-// Text - просто вывести текст
-// Container - блок, который прорисует всю область, многофункиональный
-// Expanded - виджет который растянет дочерний виджет на доступное место
+Переделать БД с Hive на SQL-Lite
